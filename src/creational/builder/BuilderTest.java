@@ -1,6 +1,8 @@
 package creational.builder;
 import structural.decorator.*;
 import creational.factory.*;
+import behavioral.observer.*;
+import creational.factory.*;
 
 public class BuilderTest {
 
@@ -25,6 +27,16 @@ public class BuilderTest {
 
         System.out.println("Dish: " + pizza.getName());
         System.out.println("Price: " + pizza.getPrice() + " KZT");
+
+        System.out.println("\n--- OBSERVER TEST ---");
+
+        Order order = new Order(new Pizza());
+
+        order.addObserver(new PickupDisplay());
+        order.addObserver(new MobileApp());
+
+        order.setStatus("Preparing");
+        order.setStatus("Ready for pickup");
     }
 }
 
