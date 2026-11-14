@@ -6,10 +6,10 @@ import java.util.List;
 
 public class Order {
 
-    private Dish dish;
+    private final Dish dish;
     private String status = "Created";
 
-    private List<OrderObserver> observers = new ArrayList<>();
+    private final List<OrderObserver> observers = new ArrayList<>();
 
     public Order(Dish dish) {
         this.dish = dish;

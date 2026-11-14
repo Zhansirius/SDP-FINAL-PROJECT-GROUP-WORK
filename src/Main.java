@@ -40,6 +40,12 @@ public class Main {
         System.out.println("Dish: " + decoratedCombo.getName());
         System.out.println("Price: " + decoratedCombo.getPrice() + " KZT");
 
+        //one more decorator
+        Dish mushroomCombo = new ExtraMushrooms(decoratedCombo);
+
+        System.out.println("With mushrooms: " + mushroomCombo.getName());
+        System.out.println("Price: " + mushroomCombo.getPrice() + " KZT");
+
         // strategy
         System.out.println("\n! STRATEGY !");
 
